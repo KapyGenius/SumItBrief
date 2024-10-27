@@ -31,10 +31,11 @@ const Demo = () => {
                     className="absolute left-0 my-2 ml-3 w-6"
                 />
                 <input 
-                    type="url" 
+                    type="text"
+                    pattern=".{2,}\..{2,}" 
                     placeholder="Paste the URL of the website" 
                     className="url_input peer"
-                    value={formatUrlHttps(article.url)}
+                    value={article.url.toLowerCase()}
                     onChange={(e) => setArticle({ ...article, url: e.target.value })}
                     required
                 />
