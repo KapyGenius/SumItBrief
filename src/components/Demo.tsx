@@ -108,7 +108,7 @@ const Demo = () => {
               <br />
               <span className="font-satoshi font-normal text-gray-700 ">
                 {/* {error?.status}*/}
-                {error?.data?.error} 
+                {(error as any)?.data?.error} 
               </span>
             </p>
           ):(
