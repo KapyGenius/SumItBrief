@@ -37,11 +37,6 @@ const Demo = () => {
     alert(`Form Submitted ${article.url}`)
   }
 
-  const formatUrlHttps = (url: string) => {
-    return url.includes('https://') || url.includes('http://') 
-            ? url : `https://${url}`
-  }
-
   return (
     <section className="mt-16 w-full max-w-xl">
         {/* Search */}
