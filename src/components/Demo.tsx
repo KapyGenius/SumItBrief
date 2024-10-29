@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react"
 import { copy, linkIcon, loader } from "../assets"
 import { useLazyGetSummaryQuery } from "../services/article"
+import { toast } from "sonner"
 
 interface Article {
   url: string
@@ -33,8 +34,8 @@ const Demo = () => {
       setArticle(newArticle)
       setAllArticles(updatedArticles)
       localStorage.setItem('articles', JSON.stringify(updatedArticles))
+      toast('Article summary fetched successfully', {position: 'top-center'})
     }
-    alert(`Form Submitted ${article.url}`)
   }
 
   return (
@@ -106,7 +107,8 @@ const Demo = () => {
               Something went wrong...
               <br />
               <span className="font-satoshi font-normal text-gray-700 ">
-
+                {/* {error?.status}*/}
+                {error?.data?.error} 
               </span>
             </p>
           ):(
