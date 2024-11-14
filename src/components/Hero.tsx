@@ -24,7 +24,7 @@ const Hero = () => {
 
         <h1 className="head_text">
             Save Time and summarize any Website <br />
-            <span className="orange_gradient">Quick and fast</span>
+            <span className="orange_gradient">Quick and Fast</span>
         </h1>
 
         <h2 className="desc">
